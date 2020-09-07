@@ -1,0 +1,142 @@
+//Main Functions
+
+-Item Management
+   -Brand / Category / Subcategory
+
+-Sell / Shopping
+
+-Order Management
+   -items / customer
+
+-Customer Manage
+   -Reports
+  
+
+-Orders
+   -voucherid,user_id,order_date,order_status
+
+
+-Order_details
+   -voucherid,product_id,qty
+
+
+
+Model Relationship
+------------------
+
+- one-to-one
+     -hasOne(parent)
+     -belongsTo(child)
+
+- one-to-many
+     -hasMany(parent)
+     -belongsTo(child)
+
+- many-to-many //many-to-many ko parent, child so pyi ma chi
+     -belongsToMany
+     -pivot table
+
+
+
+-Homework (using backend template)
+----------------------------------
+   -create route for dashboard page (get)
+
+
+   -create master blade (views/backendtemplate.blade.php)
+   -
+   -create child blade (views/backend/dashboard.blade.php)
+   -create controller BackendController
+        -create method dashboardfun()
+        -call view (backend.dashboard)
+
+
+
+Item (CRUD)
+-----------
+
+create - show form , store data
+retrieve- display data (all) , display data (row)
+update- show form with old value , update data
+delete- delete data
+
+
+
+Zoom Note
+---------
+
+  - Order Insert (detail)
+
+  -route (web.php)
+  -create checkout btn in shopping cart page
+  -External js (click checkout) (.buy_now)
+  -OrderController =>store
+  -
+
+
+
+  Authentication
+  --------------
+  - installion
+      -nodejs (call npm in terminal)
+
+  - Docs
+      -Security / Authentication
+  - Commands
+      -composer require laraval/ui
+      -php artisan ui bootstrap --auth
+      -npm install
+      -npm run dev
+  -Routes
+      -localhost:8000/login
+      -localhost:8000/register
+
+
+ Spatie
+ ------
+   -composer require(3)
+   -public (5)
+   -php artisan migrate
+   -create new seeder class (RoleTableSeeder)
+   -seed this class
+   -User model -> use HasRoles
+   -app/Http/Controller/Auth/registerController
+       -create method -> assignRole
+   -Register middleware (app/Http/kernel.php  routeMidddleware)
+   -routes/web.php
+     -role:Admin
+
+ GIT
+ ---
+ -git init
+ -git add
+ -git commit --m "message"
+ -git remote add origin master
+
+ -git pull
+
+
+ User Management
+ ---------------
+
+ users 
+    -name
+    -email
+
+
+
+
+
+
+TODO
+----
+
+=>Home
+  -items , brands , categories , subcategories
+=>filter
+  -4 (addtocart)
+
+=>shopping cart (total amount )
+
+=>delete (try)
+=>update (select ->auto selected)
