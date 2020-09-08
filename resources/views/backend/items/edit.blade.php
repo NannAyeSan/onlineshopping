@@ -42,7 +42,7 @@ method ka =POST --}}
   <div class="form-group row">
     <label for="inputprice" class="col-sm-2 col-form-label">Price</label>
     <div class="col-sm-5">
-      <input type="number"  name="price" class="form-control" id="inputprice" required="Price field is required" value="{{$item->price}}">
+      <input type="number"  name="price" class="form-control" id="inputprice" value="{{$item->price}}">
     </div>
   </div>
 
